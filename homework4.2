@@ -1,0 +1,83 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication6
+{
+    public class Product
+    {
+        private int kod;
+        private string name;
+        private int price;
+
+        public Product()
+        {
+        }
+        private int Kod
+        {
+            get
+            {
+                return kod;
+
+            }
+        }
+        private string Name
+        {
+            get
+            {
+                return name;
+            }
+
+        }
+        private int Price
+        {
+            get
+            {
+                return price;
+            }
+
+        }
+        public void Input()
+        {
+            Console.WriteLine("Enter your product  Name, please: ");
+            name = Console.ReadLine();
+            Console.WriteLine("Enter kod of product: ");
+            kod = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter price of product: ");
+            price = int.Parse(Console.ReadLine());
+
+        }
+        public override string ToString()
+        {
+            return "Product: " + name + "with price" + price + "and with code" + kod;
+
+        }
+        public void Output()
+        {
+            Console.WriteLine(ToString());
+
+        }
+
+
+    }
+
+    
+    class Program
+    {
+        static void Main()
+        {
+            Product[] masyv = new Product[5];
+            for (int i = 0; i < 5; i++)
+            {
+                masyv[i] = new Product();
+            }
+            Product min =masyv[0]
+                for (int i = 1; i < 5; i++)
+            {
+                if (masyv[i].price < min.price)
+            }
+        }
+    }
+}
