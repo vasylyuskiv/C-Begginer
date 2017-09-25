@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ConsoleApp13.Shape;
+//using static ConsoleApp13.Shape;
 
 namespace ConsoleApp13
 {
@@ -26,6 +26,7 @@ namespace ConsoleApp13
             set { Name = value; }
 
         }
+    }
         public class Circle : Shape
 
         {
@@ -41,6 +42,7 @@ namespace ConsoleApp13
                 double circper = 2 * Math.PI * radius;
                 return circper;
 
+
                 throw new NotImplementedException();
             }
             public override double Area()
@@ -49,7 +51,7 @@ namespace ConsoleApp13
                 return A;
                 throw new NotImplementedException();
             }
-
+        
 
         }
         public class Square : Shape
@@ -77,7 +79,7 @@ namespace ConsoleApp13
                 throw new NotImplementedException();
             }
 
-        }
+        
     }
     class Program
     {
@@ -102,11 +104,13 @@ namespace ConsoleApp13
             }
 
 
+            string l = string.Join(",", formy.ToList());
+            Console.WriteLine(l);
 
-            foreach (var r in formy)
-            {
-                Console.WriteLine("{0}", r);
-            }
+            //foreach (var r in formy)
+            //{
+            //    Console.WriteLine("it works");
+            //}
         }
 
 
